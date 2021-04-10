@@ -1,0 +1,370 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+  }
+
+
+.game-container {
+    background-image: url(https://images.unsplash.com/photo-1462007361476-49e695345154?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+.robot-speech-bubble {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.4rem;
+    line-height: 2.6rem;
+    font-size: 1.6rem;
+    color: aliceblue;
+    position: absolute;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, blue, grey);
+    border: .7rem groove #A3A3A3;
+    border-radius: 4rem;
+    height: 15vh;
+    width: 40vh;
+    -webkit-box-shadow: -.4rem .5rem 1.5rem .5rem #ffffff; 
+    box-shadow: -.4rem .5rem 1.5rem .5rem #ffffff;
+    position: absolute;
+    top: 10%;
+    left: 78%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        
+    }
+
+   /* ROBOT */
+
+    .robot-container {
+        position: absolute;
+       left: 70%;
+       top: 20%;
+       width: 50rem;
+       height: 50rem;
+    }
+
+    .head {
+        position: absolute;
+        left: 45%;
+        top: 1%;
+background-image: linear-gradient(silver, lightblue);
+clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+height: 20rem;
+width: 20rem;
+    }
+
+
+    .left-eye {
+        position: absolute;
+background-image: linear-gradient(red, orange);
+clip-path: ellipse(29% 17% at 52% 50%);
+top: 7%;
+left: 50%;
+height: 7rem;
+width: 7rem;
+}
+
+.right-eye {
+    position: absolute;
+    background-image: linear-gradient(red, orange);
+    clip-path: ellipse(29% 17% at 52% 50%);
+    top: 7%;
+    left: 65%;
+    height: 7rem;
+    width: 7rem;
+}
+
+    .mouth {
+        position: absolute;
+        background-image: linear-gradient(black, grey);
+        clip-path: ellipse(47% 5% at 52% 50%);
+        top: 20%;
+        left: 58%;
+        height: 7rem;
+        width: 7rem;
+    }
+
+    .body {
+        position: absolute;
+        left: 45%;
+        top: 40%;
+background-image: linear-gradient(lightblue, silver);
+clip-path: polygon(30% 0, 70% 0, 100% 100%, 0% 100%);
+height: 20rem;
+width: 20rem;
+z-index: 2;
+    }
+
+    .feet {
+        position: absolute;
+        left: 50%;
+        top: 75%;
+background-image: linear-gradient(darkgrey, black);
+clip-path: circle(50% at 50% 50%);
+height: 15rem;
+width: 15rem;
+
+    }
+
+
+  /* SCORE BOARD */
+
+.score-container {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.4vh;
+    color: aliceblue;
+    top: 4%;
+    left: 10%;
+    position: absolute;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, blue, grey);
+    border: .7rem groove #A3A3A3;
+    border-radius: 4rem;
+    height: 15rem;
+    width: 20rem;
+    -webkit-box-shadow: -.4rem .5rem 1.5rem .5rem #ffffff; 
+    box-shadow: -.4rem .5rem 1.5rem .5rem #ffffff;
+    padding-top: .5rem;
+    padding-bottom: 1rem;    
+    font-size: 2rem;  
+}
+
+.score-the-word {
+   
+    padding-bottom: 2rem;
+}
+
+.robot-score-holder {
+    padding-top: 1rem;
+    padding-bottom: 0.9rem;
+
+}
+
+.score-divider {
+    
+    border-top: .3rem solid #bbb;
+    border-radius: .3rem;
+  }
+
+.player-score-holder {
+    padding-top: 0.9rem;
+
+}
+
+/* T I M E R */
+
+.timer-container {
+    position: absolute;
+    border: 5px double #B7B7B7;
+    height: 4rem;
+    width: 16rem;
+    left: 44%;
+    top: 4%;
+    color: aliceblue;
+    font-size: 2.7rem;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    -webkit-box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 13px 2px #000000; 
+box-shadow: #FFF 0 -1px 4px, #ff0 0 -2px 10px, #ff8000 0 -10px 20px, red 0 -18px 40px, 5px 5px 13px 2px #000000;
+   
+}
+
+.time-variable {
+
+}
+
+    
+/* A R E N A */
+
+.arena-container {
+    position: absolute;
+    background-image: url(https://images.unsplash.com/photo-1598171182339-b24dd64241a6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80);
+    height: 60rem;
+    width: 60rem;
+    top: 12%;
+    left: 33%;
+    opacity: 0.9;
+    -webkit-border-radius: 4rem;
+-moz-border-radius: 4rem;
+border-radius: 4rem;
+font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.4rem;
+    color: white;
+    text-align: center;
+    
+}
+
+.robot-pick-box {
+    position: absolute;
+    left: 36%;
+    top: 6%;
+     border: .5rem dashed #E02010;
+     height: 15rem;
+     width: 15rem;
+     
+
+}
+
+.player-win-lose-message-variable-box {
+    font-size: 2rem;
+    position: absolute;
+    left: 5%;
+    top: 47%;
+    width: 60rem;
+    height: 2rem;
+    color: #FFFFFF;
+
+text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+}
+
+.player-win-lose-message {
+    position: absolute;
+    font-weight: 600;
+    left: 5%;
+    top: 47%;
+}
+
+.player-pick-box {
+    position: absolute;
+    left: 36%;
+    top: 66%;
+    border: .5rem dashed #E02010;
+    height: 15rem;
+    width: 15rem;
+}
+
+/* U S E R  INTERFACE */
+
+.ui-container {
+    position: absolute;
+    top: 80%;
+    left: 31%;
+    height: 18rem;
+    width: 68rem;
+    -webkit-border-radius: 4rem;
+    -moz-border-radius: 4rem;
+    border-radius: 4rem;
+    -webkit-box-shadow: 0px 0px 40px 25px #FFFFFF; 
+box-shadow: 0px 0px 40px 25px #FFFFFF;
+
+}
+
+.rock-container {
+    position: absolute;
+    left: 7%;
+    top: 10%;
+    border: .5rem dashed #FFBF00;
+    height: 15rem;
+    width: 15rem;
+}
+
+.rock-img {
+    background-image: linear-gradient(rgba(153,238,255,0.1), rgba(0,51,153, 0.1)), url(../img/rock.png);
+background-size: 100% 100%;
+height: 15rem;
+    width: 15rem;
+}
+
+.paper-container {
+    position: absolute;
+    left: 38%;
+    top: 10%;
+    border: .5rem dashed #FFBF00;
+    height: 15rem;
+    width: 15rem;
+}
+
+.paper-img {
+    
+    background: linear-gradient(rgba(153,238,255,0.1), rgba(0,51,153, 0.1)), url(../img/paper.png);
+background-size: 100% 100%;
+height: 15rem;
+    width: 15rem;
+}
+
+.scissors-container {
+    position: absolute;
+    left: 69%;
+    top: 10%;
+    border: .5rem dashed #FFBF00;
+    height: 15rem;
+    width: 15rem;
+}
+
+.scissors-img {
+    background-image: linear-gradient(rgba(153,238,255,0.1), rgba(0,51,153, 0.1)), url(../img/scissors.png );
+background-size: 100% 100%;
+height: 15rem;
+    width: 15rem;
+}
+
+.img-hover:hover {
+    
+        outline: 0.8rem solid #19FF40;
+        transform: scale(1.25) translateY(-1rem);
+        box-shadow: 0 2.5rem 4rem rbga(black, .5);
+        
+        transition: all .2s;
+      
+}
+
+
+/* HELP BUTTON */
+
+.help-button {
+    position: absolute;
+    left: 13%;
+    top: 88%;
+    background: rgba(202, 208, 30, 0.54);
+    background-image: -webkit-linear-gradient(top, rgba(202, 208, 30, 0.54), rgba(246, 217, 61, 0.72));
+    background-image: -moz-linear-gradient(top, rgba(202, 208, 30, 0.54), rgba(246, 217, 61, 0.72));
+    background-image: -ms-linear-gradient(top, rgba(202, 208, 30, 0.54), rgba(246, 217, 61, 0.72));
+    background-image: -o-linear-gradient(top, rgba(202, 208, 30, 0.54), rgba(246, 217, 61, 0.72));
+    background-image: -webkit-gradient(to bottom, rgba(202, 208, 30, 0.54), rgba(246, 217, 61, 0.72));
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    border-radius: 2rem;
+    color: #FFFFFF;
+    font-family: Tahoma;
+    font-size: 2rem;
+    padding: 1.2rem;
+    -webkit-box-shadow: 0 .1rem 2rem .9rem #FFFFFF;
+    -moz-box-shadow: 0 .1rem 2rem .9rem #FFFFFF;
+    box-shadow: 0 .1rem 2rem .9rem #FFFFFF;
+    text-shadow: 0 .1rem 2rem #000000;
+    border: solid #FFFFFF .1rem;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+ }
+ 
+ .help-button:hover {
+    background: #34D01E;
+    border: solid #337FED .6rem;
+    -webkit-border-radius: 1.1rem;
+    -moz-border-radius: 1.1rem;
+    border-radius: 1.1rem;
+    text-decoration: none;
+ }
+
+ /*THE FUCKING ROBOT*/
+
+
+
+
+/* A N I M A T I O N S */
+
